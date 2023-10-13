@@ -52,7 +52,7 @@ let addEvents = () => {
         btn.addEventListener("click", function () {
             let counter = this.closest(".cart-product-amount").querySelector(".quantity");
             counter.innerHTML = changeQuantity(counter.innerHTML);
-            addQuantityToLocalStorage(this.dataset.id, counter.innerHTML);
+            addQuantityToLocalStorage(this.dataset.id, parseInt(counter.innerHTML));
             calcTotals();
         })
     })
